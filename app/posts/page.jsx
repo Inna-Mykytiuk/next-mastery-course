@@ -1,7 +1,7 @@
 import React from "react";
 
 const Posts = () => {
-  return <div>Posts</div>;
+  return <div className='text-gray-200'>Posts</div>;
 };
 
 export default Posts;
