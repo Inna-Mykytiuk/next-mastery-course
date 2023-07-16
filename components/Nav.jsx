@@ -11,21 +11,21 @@ const Nav = () => {
   const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const res = await getProviders();
-  //     setProviders(res);
-  //   })();
-  // }, []);
-
   useEffect(() => {
-    const setUpProviders = async () => {
-      const response = await getProviders();
-
-      setProviders(response);
-    };
-    setUpProviders();
+    (async () => {
+      const res = await getProviders();
+      setProviders(res);
+    })();
   }, []);
+
+  // useEffect(() => {
+  //   const setUpProviders = async () => {
+  //     const response = await getProviders();
+
+  //     setProviders(response);
+  //   };
+  //   setUpProviders();
+  // }, []);
 
   return (
     <nav className='flex-between w-full mb-16 pt-3'>
